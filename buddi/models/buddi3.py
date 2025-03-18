@@ -19,7 +19,7 @@ from tensorflow.keras.layers import Input, Dense, Lambda, Flatten, Softmax, ReLU
 from tensorflow.keras.layers import concatenate as concat
 from tensorflow.keras.models import Model, Sequential
 from tensorflow.keras import backend as K
-from tensorflow.keras.losses import mean_absolute_error, mean_squared_error, kl_divergence
+from tensorflow.keras.losses import MeanAbsoluteError, MeanSquaredError, KLDivergence
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras.activations import relu, linear
 from tensorflow.keras.utils import to_categorical, normalize
