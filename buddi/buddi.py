@@ -22,6 +22,9 @@ from scipy.stats import rankdata
 from tensorflow.keras.utils import to_categorical, normalize
 from tensorflow.keras.optimizers import Adam
 import tensorflow as tf
+#add the correct imprt format for Keras3
+import keras
+from keras.optimizers import Adam
 
 
 # Images, plots, display, and visualization
