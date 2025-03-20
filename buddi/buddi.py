@@ -1018,7 +1018,7 @@ def train_buddi(res_data_path, exp_id, use_buddi4,
             beta_kl_drug = params.beta_kl_drug,
             beta_kl_bulk = params.beta_kl_bulk,
             activ = params.activ, 
-            optim = keras.optimizers.legacy.Adam(learning_rate=params.adam_learning_rate)
+            optim = keras.optimizers.Adam(learning_rate=params.adam_learning_rate)
             # optim = tf.keras.optimizers.legacy.Adam(learning_rate=params.adam_learning_rate)
         )
 
@@ -1048,7 +1048,7 @@ def train_buddi(res_data_path, exp_id, use_buddi4,
             beta_kl_rot = params.beta_kl_rot,
             beta_kl_bulk = params.beta_kl_bulk,
             activ = params.activ, 
-            optim = keras.optimizers.legacy.Adam(learning_rate=params.adam_learning_rate)
+            optim = keras.optimizers.Adam(learning_rate=params.adam_learning_rate)
             # optim = tf.keras.optimizers.legacy.Adam(learning_rate=params.adam_learning_rate)
         )
 
