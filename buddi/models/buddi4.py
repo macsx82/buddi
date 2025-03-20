@@ -19,6 +19,10 @@ from tensorflow.keras.activations import relu, linear
 from tensorflow.keras.utils import to_categorical, normalize
 from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.optimizers import Adam, SGD
+#add the correct imprt format for Keras3
+import keras
+from keras.optimizers import Adam
+
 import matplotlib.pyplot as plt
 from scipy.spatial import distance_matrix
 from scipy.stats import spearmanr, pearsonr
@@ -262,7 +266,8 @@ def instantiate_model(n_x,
 
 
     # Sampling latent space
-    z_slack = Lambda(sample_z, output_shape = (n_label_z, ), name="z_samp_slack")([mu_slack, l_sigma_slack, n_label_z])
+    # z_slack = Lambda(sample_z, output_shape = (n_label_z, ), name="z_samp_slack")([mu_slack, l_sigma_slack, n_label_z])
+    z_slack = Lambda(sample_z, output_shape = n_label_z, name="z_samp_slack")([mu_slack, l_sigma_slack, n_label_z])
     z_rot = Lambda(sample_z, output_shape = (n_label_z, ), name="z_samp_rot")([mu_rot, l_sigma_rot, n_label_z])
     z_drug = Lambda(sample_z, output_shape = (n_label_z, ), name="z_samp_drug")([mu_drug, l_sigma_drug, n_label_z])
     z_bulk = Lambda(sample_z, output_shape = (n_label_z, ), name="z_samp_bulk")([mu_bulk, l_sigma_bulk, n_label_z])
